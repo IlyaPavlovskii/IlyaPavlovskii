@@ -14,7 +14,11 @@
 - I'm a `Android Engineer` with 10 years experience  
 - I have Bachelor computer science degree (<a href="https://www.bsuir.by/en/">BSUIR</a>)
 - I have worked in many companies(outsourcing, freelance, startup and big corporate)
-- I’m currently open for a new `job opportunity`, this is [CV](/raw/main/IliaPavlovskii-CV.pdf)
+- Here is my [CV](/raw/main/IliaPavlovskii-CV.pdf)
+- There you might find by [GitHub](https://github.com/IlyaPavlovskii/)
+- Also, I write topics to [Habr](https://habr.com/ru/users/TranE91/posts/)
+- And to the [Medium](https://pavlovskiiilia.medium.com/) too
+- You might find me on [LinkedIn](https://www.linkedin.com/in/ipavlovskii/)
 
 <h1>
     <a href="">

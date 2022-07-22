@@ -1,5 +1,5 @@
 site_name: Ilia Pavlovskii
-site_url: https://ilyapavlovskii.github.io/src
+site_url: https://ilyapavlovskii.github.io/IlyaPavlovskii
 nav:
     - Introduction: 'index.md'
     - Android:
