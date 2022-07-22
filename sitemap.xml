@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ilyapavlovskii.github.io/src/</loc>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/</loc>
          <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ilyapavlovskii.github.io/src/android/russian/stop-refactoring/</loc>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/stop-refactoring/</loc>
          <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>

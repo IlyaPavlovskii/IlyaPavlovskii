@@ -19,6 +19,8 @@
 - Also, I write topics to [Habr](https://habr.com/ru/users/TranE91/posts/)
 - And to the [Medium](https://pavlovskiiilia.medium.com/) too
 - You might find me on [LinkedIn](https://www.linkedin.com/in/ipavlovskii/)
+  
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ipavlovskii)
 
 <h1>
     <a href="">

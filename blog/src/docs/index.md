@@ -20,6 +20,8 @@
 - And to the [Medium](https://pavlovskiiilia.medium.com/) too
 - You might find me on [LinkedIn](https://www.linkedin.com/in/ipavlovskii/)
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ipavlovskii)
+
 <h1>
     <a href="">
         <img align="" height='130px' src="https://github-readme-stats.vercel.app/api?username=IlyaPavlovskii&hide_title=true&show_icons=true&include_all_commits=true&line_height=21&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite" />
