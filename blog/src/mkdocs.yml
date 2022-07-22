@@ -1,0 +1,17 @@
+site_name: Ilia Pavlovskii
+site_url: https://ilyapavlovskii.github.io/src
+nav:
+    - Introduction: 'index.md'
+    - Android:
+#          - 'English':
+#                - ''
+          - 'Russian':
+                - 'Стоп рефакторинг. Kotlin. Android': 'android/russian/stop-refactoring/index.md'
+    - LinkedIn: "https://www.linkedin.com/in/ipavlovskii/"
+    - GitHub: "https://github.com/IlyaPavlovskii/"
+    - Habr: "https://habr.com/ru/users/TranE91/posts/"
+    - Medium: "https://pavlovskiiilia.medium.com/"
+theme:
+    name: material
+    locale: en
+    include_sidebar: true
