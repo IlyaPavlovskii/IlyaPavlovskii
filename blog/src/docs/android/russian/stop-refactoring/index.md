@@ -638,7 +638,7 @@ class PhoneNumberValidator : Validator {
 нужд не задумываясь о последствиях. Если вы не обезопасились методами, которые не пропустят "сломанный" код в рабочую
 среду, ждите бага.
 
-Пришло обновление задачи, когда на экране N вместо [MSISDN(https://ru.wikipedia.org/wiki/MSISDN) необходимо 
+Пришло обновление задачи, когда на экране N вместо [MSISDN](https://ru.wikipedia.org/wiki/MSISDN) необходимо 
 использовать [E.164](https://ru.wikipedia.org/wiki/E.164):
 <p align="center">
   <img src="resources/wat-again.png" />
