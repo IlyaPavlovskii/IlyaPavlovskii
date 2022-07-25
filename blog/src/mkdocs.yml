@@ -7,6 +7,8 @@ nav:
 #                - ''
           - 'Russian':
                 - 'Стоп рефакторинг. Kotlin. Android': 'android/russian/stop-refactoring/index.md'
+    - Other:
+          - 'Год в Польше по PBH': 'other/pbh/index.md'
     - LinkedIn: "https://www.linkedin.com/in/ipavlovskii/"
     - GitHub: "https://github.com/IlyaPavlovskii/"
     - Habr: "https://habr.com/ru/users/TranE91/posts/"
