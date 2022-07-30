@@ -1,4 +1,4 @@
-<h1 align="center">Hi there, I'm Ilia Pavlovskii<img src="raw/main/images/hi.gif" height="32"/></h1>
+<h1 align="center">Hi there, I'm Ilia Pavlovskii</h1>
 <div align="center">
     <img src="raw/main/images/android.png" style="vertical-align: middle;" width="32"/>
     <span style="vertical-align: middle; font-size: x-large;">Android Engineer</span>
