@@ -1,8 +1,0 @@
-site_name: Android
-nav:
-    - '1.md'
-    - '2.md'
-theme:
-    name: material
-    locale: en
-    include_sidebar: true

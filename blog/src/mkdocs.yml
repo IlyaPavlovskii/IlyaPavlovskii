@@ -3,8 +3,8 @@ site_url: https://ilyapavlovskii.github.io/IlyaPavlovskii
 nav:
     - Introduction: 'index.md'
     - Android:
-#          - 'English':
-#                - ''
+          - 'English':
+                - 'Stop Refactoring. Kotlin. Android': 'android/english/stop-refactoring/index.md'
           - 'Russian':
                 - 'Стоп рефакторинг. Kotlin. Android': 'android/russian/stop-refactoring/index.md'
     - Other:
