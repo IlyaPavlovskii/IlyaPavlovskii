@@ -15,12 +15,13 @@
 - I have Bachelor computer science degree (<a href="https://www.bsuir.by/en/">BSUIR</a>)
 - I have worked in many companies(outsourcing, freelance, startup and big corporate)
 - Here is my [CV](/raw/main/IliaPavlovskii-CV.pdf)
-- There you might find by [GitHub](https://github.com/IlyaPavlovskii/)
-- Also, I write topics to [Habr](https://habr.com/ru/users/TranE91/posts/)
-- And to the [Medium](https://pavlovskiiilia.medium.com/) too
-- You might find me on [LinkedIn](https://www.linkedin.com/in/ipavlovskii/)
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ipavlovskii)
+
+[![github](resources/github.svg)](https://github.com/IlyaPavlovskii/)
+[![linkedin](resources/linkedin.svg)](https://www.linkedin.com/in/ipavlovskii/)
+[![habr](resources/habr.svg)](https://habr.com/ru/users/TranE91/posts/)
+[![medium](resources/medium.svg)](https://pavlovskiiilia.medium.com/)
+[!["Buy Me A Coffee"](resources/buy_me_a_coffee.svg)](https://www.buymeacoffee.com/ipavlovskii)
 
 <h1>
     <a href="">
