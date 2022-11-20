@@ -21,6 +21,7 @@
 [![habr](resources/habr.svg)](https://habr.com/ru/users/TranE91/posts/)
 [![medium](resources/medium.svg)](https://pavlovskiiilia.medium.com/)
 [!["Buy Me A Coffee"](resources/buy_me_a_coffee.svg)](https://www.buymeacoffee.com/ipavlovskii)
+[!["PayPal"](resources/paypal.svg)](https://www.paypal.com/paypalme/ipavlovskii)
 
 <h1>
     <a href="">
