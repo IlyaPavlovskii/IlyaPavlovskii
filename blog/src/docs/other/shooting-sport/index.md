@@ -24,7 +24,7 @@
 
 Суть такая, на вас вешают пояс с кобурой(в которой будет заряженный пистолет), и 1-N пасекув(склад для магазинов). Вы двигаетесь по тиру стреляя по статической/движущиеся мишени.
 
-[Scutum B7 - dynamic Glock 17 training](https://www.youtube.com/shorts/USbDuTGBRJ0)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668989153/video_to_markdown/images/youtube--USbDuTGBRJ0-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=USbDuTGBRJ0 "")
 
 Перенос оружия с одной мишени на другую - это и есть элемент динамической стрельбы, которую нужно изучать/практиковать отдельно.
 
@@ -106,7 +106,7 @@
 
 Это ряд упражнений, на освоение правильной стойки, выравнивание спины, положение рук, выхвата оружия, прицеливание, правильного спуска, выстрела, контрольного спуска и возвращением пистолета в кобуру. Ниже я добавил серию роликов, в которых подробно описано что такое холощение и для чего оно нужно.
 
-[https://youtu.be/iaBT6JqtQSA](https://youtu.be/iaBT6JqtQSA)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668989230/video_to_markdown/images/youtube--iaBT6JqtQSA-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=iaBT6JqtQSA "")
 
 Далее, есть помесь упражнений, на повышение концентрации - стрельба холостыми патронами(они не производят выстрел, но для продолжения стрельбы, вам нужно перезарядить патрон в патронник, при этом сделав вынос, прицеливание, выстрел), мешаный магазин(в магазин в случайном порядке добавляются холостые и боевые патроны и вы не знаете в какой момент произойдет выстрел, а в какой осечка) и т.д. 
 
@@ -114,7 +114,7 @@
 
 Их довольно много, напомню, что мы концентрируемся только на пистолете, а есть еще гладкий ствол и карабин. Вся полезная информация собрана в этом плейлисте, часть из них вы будете выполнять с тренером на занятиях, остальное, можете запросить для себя.
 
-[https://www.youtube.com/watch?v=guxSc0o6lAU&list=PLYqiOqBy2WM8FNCocZnQCXwUuUMuqqyTE&ab_channel=LuckyGunnerAmmo](https://www.youtube.com/watch?v=guxSc0o6lAU&list=PLYqiOqBy2WM8FNCocZnQCXwUuUMuqqyTE&ab_channel=LuckyGunnerAmmo)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668989271/video_to_markdown/images/youtube--guxSc0o6lAU-c05b58ac6eb4c4700831b2b3070cd403.jpg)]( https://www.youtube.com/watch?v=guxSc0o6lAU&list=PLYqiOqBy2WM8FNCocZnQCXwUuUMuqqyTE "")
 
 ## Амуниция и стоимость
 
@@ -149,7 +149,7 @@
 
 Всю необходимую амуницию вам предоставят в тире. Если хотите иметь свое - [закупайтесь ремнем, кобурами, пасками и пр](https://m-tac.pl/produkty/odziez,2,9). Так же, вам пригодятся наушники и тактические очки. Здесь как душе угодно. Если устает пальчик заряжать магазины пистолетов - есть заряжкалки для пистолетов.
 
-[https://www.youtube.com/watch?v=fTk2otnovzs&ab_channel=maglula](https://www.youtube.com/watch?v=fTk2otnovzs&ab_channel=maglula)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668989316/video_to_markdown/images/youtube--fTk2otnovzs-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=fTk2otnovzs "")
 
 ## Мифы
 
@@ -159,19 +159,19 @@
 
 Вот например, здесь все правдиво
 
-[https://youtu.be/qHuK1UGbkA8?t=114](https://youtu.be/qHuK1UGbkA8?t=114)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668989344/video_to_markdown/images/youtube--qHuK1UGbkA8-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=qHuK1UGbkA8 "")
 
 Ребята стреляют в бронированную дверь и ждут рикошета. Все так. Когда я первый раз стрелял по тарелкам с 10 метров, в меня прилетали осколки, я очень благодарен своему тренеру, что он является жестким фетешистом техники безопасности, и мы не рисковали стрелять с более близкого расстояния. Очень не приятно получить увечье на такой ерунде. 
 
 А вот тут, например, [Джованни Йованович](https://youtu.be/Niaw3Ez0YLU) выполняет смешанный норматив IPSC + IDPA: 
 
-[https://youtu.be/xSM_nz6gKOI](https://youtu.be/xSM_nz6gKOI)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668989401/video_to_markdown/images/youtube--xSM_nz6gKOI-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=xSM_nz6gKOI "")
 
 Только уберите возможность обратного боя - идеальный кандидат на получение сертификата. Обратите внимание на элемент перезарядки - он выполняется безукоризненно. Есть вопросы - почему его адамантиево-вибраниумный трико, прошибает нож(мб. он из криптонита?). Никакого ернечения, это кино, и элементы хореографии выполнены очень эффектно!
 
 А здесь, собственно, пример того, как Киану Ривз превратился в Джона Уика.
 
-[https://youtu.be/csNtj77Nmps](https://youtu.be/csNtj77Nmps)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668989723/video_to_markdown/images/youtube--csNtj77Nmps-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=csNtj77Nmps "")
 
 ## Выводы
 
@@ -179,10 +179,10 @@
 
 И в конце немного видео из вылазок, как мотиватор.
 
-[https://youtu.be/boN65zpsn6Y](https://youtu.be/boN65zpsn6Y)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668990031/video_to_markdown/images/youtube--boN65zpsn6Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=boN65zpsn6Y "")
 
-[https://youtu.be/3xwSDxdF_os](https://youtu.be/3xwSDxdF_os)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668990075/video_to_markdown/images/youtube--3xwSDxdF_os-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=3xwSDxdF_os "")
 
-[https://youtu.be/qu0WkuvhIYU](https://youtu.be/qu0WkuvhIYU)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668990119/video_to_markdown/images/youtube--qu0WkuvhIYU-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=qu0WkuvhIYU "")
 
-[https://youtu.be/cZcEspowF80](https://youtu.be/cZcEspowF80)
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1668990142/video_to_markdown/images/youtube--cZcEspowF80-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=cZcEspowF80 "")

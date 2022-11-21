@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/</loc>
-         <lastmod>2022-08-06</lastmod>
+         <lastmod>2022-11-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/stop-refactoring/</loc>
-         <lastmod>2022-08-06</lastmod>
+         <lastmod>2022-11-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/stop-refactoring/</loc>
-         <lastmod>2022-08-06</lastmod>
+         <lastmod>2022-11-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/pbh/</loc>
-         <lastmod>2022-08-06</lastmod>
+         <lastmod>2022-11-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/shooting-sport/</loc>
+         <lastmod>2022-11-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
