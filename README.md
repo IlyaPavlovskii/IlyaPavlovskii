@@ -16,12 +16,21 @@
 - I have worked in many companies(outsourcing, freelance, startup and big corporate)
 - Here is my [CV](/raw/main/IliaPavlovskii-CV.pdf)
 
+### Social networks
 [![github](resources/github.svg)](https://github.com/IlyaPavlovskii/)
 [![linkedin](resources/linkedin.svg)](https://www.linkedin.com/in/ipavlovskii/)
-[![habr](resources/habr.svg)](https://habr.com/ru/users/TranE91/posts/)
+
+### Blogs
+Here you might find some topics on a popular platforms
+
 [![medium](resources/medium.svg)](https://pavlovskiiilia.medium.com/)
-[!["Buy Me A Coffee"](resources/buy_me_a_coffee.svg)](https://www.buymeacoffee.com/ipavlovskii)
+[![habr](resources/habr.svg)](https://habr.com/ru/users/TranE91/posts/)
+
+### Donate
+By links you might support my work and increase motivation to devote more time to it
+
 [!["PayPal"](resources/paypal.svg)](https://www.paypal.com/paypalme/ipavlovskii)
+[!["Buy Me A Coffee"](resources/buy_me_a_coffee.svg)](https://www.buymeacoffee.com/ipavlovskii)
 
 <h1>
     <a href="">
