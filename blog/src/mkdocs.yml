@@ -5,6 +5,7 @@ nav:
     - Android:
           - 'English':
                 - 'Stop Refactoring. Kotlin. Android': 'android/english/stop-refactoring/index.md'
+                - 'FeatureToggle cooking': 'android/english/feature-toggle/index.md'
           - 'Russian':
                 - 'Стоп рефакторинг. Kotlin. Android': 'android/russian/stop-refactoring/index.md'
                 - 'Готовим FeatureToggle для Android': 'android/russian/feature-toggle/index.md'

@@ -1,0 +1,924 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/feature-toggle/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>FeatureToggle cooking - Ilia Pavlovskii</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#featuretoggle-recipe-for-android" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Ilia Pavlovskii" class="md-header__button md-logo" aria-label="Ilia Pavlovskii" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ilia Pavlovskii
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FeatureToggle cooking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Ilia Pavlovskii" class="md-nav__button md-logo" aria-label="Ilia Pavlovskii" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Ilia Pavlovskii
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          English
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="English" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          English
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stop-refactoring/" class="md-nav__link">
+        Stop Refactoring. Kotlin. Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          FeatureToggle cooking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        FeatureToggle cooking
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is it?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-applicable" class="md-nav__link">
+    Where applicable:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cook" class="md-nav__link">
+    How to cook?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lasagna-recipe" class="md-nav__link">
+    Lasagna recipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bon-appetit" class="md-nav__link">
+    Bon appetit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    P.S.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Russian
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Russian" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Russian
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../russian/stop-refactoring/" class="md-nav__link">
+        Стоп рефакторинг. Kotlin. Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../russian/feature-toggle/" class="md-nav__link">
+        Готовим FeatureToggle для Android
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/pbh/" class="md-nav__link">
+        Год в Польше по PBH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/shooting-sport/" class="md-nav__link">
+        Стрелковый спорт или новое хобби
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.linkedin.com/in/ipavlovskii/" class="md-nav__link">
+        LinkedIn
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/IlyaPavlovskii/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://habr.com/ru/users/TranE91/posts/" class="md-nav__link">
+        Habr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://pavlovskiiilia.medium.com/" class="md-nav__link">
+        Medium
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is it?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-applicable" class="md-nav__link">
+    Where applicable:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cook" class="md-nav__link">
+    How to cook?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lasagna-recipe" class="md-nav__link">
+    Lasagna recipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bon-appetit" class="md-nav__link">
+    Bon appetit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    P.S.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="featuretoggle-recipe-for-android">FeatureToggle recipe for Android</h1>
+<p>Hello, my name is Ilia, I’m Android Engineer. Almost three years ago, we started <a href="https://play.google.com/store/apps/details?id=net.humans.fintech_uz">our fintech project</a>. MVP deadline was very optimistic. A week before the release, our team realized that no one was going to postpone the start date, and one feature was unlikely to be completed on time. We didn’t want to take risks and it was decided to cover this part with a stub. By blocking part of the non-working functionality, we had hopes that the MVP scope would be closed. We planned to disable non-working code so that at the click of the CI / Web button, the screen became available to the user.</p>
+<p>Step by step, our team increased. Many developers didn’t understand what the system was. The guide was required for the in-house team too. For this reason, we decided to create a separate library. But it wasn't enough… And the development process was modified too.</p>
+<p>To be honest, the talks about FeatureToggle integration was a very long time. That story was a trigger.</p>
+<h2 id="what-is-it">What is it?</h2>
+<p>FeatureToggle - is a development instrument that gives the possibility to disable/enable some features depending on the configuration. </p>
+<h3 id="where-applicable">Where applicable:</h3>
+<ul>
+<li><strong>Enable/disable features:</strong>
+Feature toggle basis - possibility to switch features according to the condition. That means - you might share your non-completed features with developers before finishing them. Also, the possibility is open to preparing any configurations for different build types. For example: feature <code>A</code> is available for developers, enabled for QA team, but disabled for Users.
+With this tool, you can switch from <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">GitFlow</a> to <a href="https://trunkbaseddevelopment.com/">TBD</a>(IMO, without FeatureToggle it is impossible)</li>
+</ul>
+<p align="center">
+    <img src="resources/Untitled.svg" alt="Until we lift the lid, we won't know what's in the pan."/>
+</p>
+
+<ul>
+<li><strong><a href="https://en.wikipedia.org/wiki/A/B_testing">A/B testing</a></strong>
+Let’s suppose that we have a hypothesis, that all users love to eat burgers. But, our manager doesn’t think so. In his opinion, all users love hot-dogs. And only the target user will help us to resolve this dispute. Ok, we might create a questionnaire on the main page or open a <a href="https://firebase.google.com/docs/projects/iam/overview">marketing company</a>. But it will be so distracting to user and it will be impossible to create and manage many hypotheses. A/B testing it’s a solution that might solve that problem invisibly to user.
+Just split our users into 2 groups: burger lovers and hot-dog lovers. All clicks to the food banner have to be marked with analytics events. In advance with the manager the criteria for the success of the experiment and the conditions under which the experiment should be stopped. Then all clicks to the burger banner are put into the burger-analytics-event bucket, and the same story with hot-dog.</li>
+</ul>
+<p align="center">
+    <img src="resources/Untitled%201.svg"/>
+</p>
+<p>It is not necessary to have only 2 conditions for the experiment. A hypothesis can contain multiple inputs and outcomes.</p>
+<p align="center">
+    <img src="resources/Untitled%202.svg"/>
+</p>
+<p>Usually, data analysis is performed on the side that is responsible for issuing them. In our case, this will be the <strong>backend</strong>, and the client developers paint the buttons. It is only an example. The more realistic picture for the client story - is how that banner will be represented: vertical list, horizontal list, grid layout or custom big banner. </p>
+<ul>
+<li><strong>Remote control</strong>
+Let’s continue to talk about our hypothesis. Just imagine, that we created 10th variations for an experiment. One of them have an incorrect implementation and all users with that variation crashed. To solve that problem, usually, we have to create a bugfix ticket and wait until these users update our application. Of course, <a href="https://developer.android.com/guide/playcore/in-app-updates">in-app update</a> must help to solve it faster. But solving that problem might spend more than one week. One week of downtime for 10th percent of users - too much. 
+There is no need to immediately interrupt the rollout for all users and solve problems. All that we want is to disable failed configuration remotely and continue bugfixing in state mode. The new config will be downloaded as soon as possible and the application will not be crashed anymore. Let us leave this condition as obligatory for the formation of our system.</li>
+<li><strong>Testing</strong>
+If we have a possibility to disable one part of the code by feature flag, we might to hide some part of the functionality from other eyes. The same assembly will contain several implementation variations. By that reason, when we pass the build to the QA team, we will write a guide on how to switch feature toggles. To make a possibility to check all variations.
+The same behavior awaits the next chain - internal,alpha, beta, release.</li>
+</ul>
+<p align="center">
+    <img src="resources/process-movement-scheme.png"/>
+    <img src="resources/dev-qa-prod.png"/>
+</p>
+
+<h2 id="how-to-cook">How to cook?</h2>
+<p>Now we know everything that we need to start cooking the FeatureToggle. Let’s form all necessary requirements to determine what we have to receive as a result. The system must have the possibility to force functionality, set flexible configurations, override values for different build types and have a remote control. In addition, add required system scalability and protection from unnecessary configuration falling into the wrong hands.</p>
+<p>Feature flags can be toggled in the following ways:  </p>
+<ul>
+<li><strong>configuration</strong>
+We want to have unique configurations on <a href="https://developer.android.com/studio/build/build-variants">different flavors</a>. Of course, it is possible to override programmatically on each flavor codebase. But it's not elegant. Just imagine, that you have 5 flavors(internal/alpha/beta/testing and production) and you have to put one developer to set up all flavors. Is it not expensive? What about creating a system with self-validation via a configuration file: JSON/XML/YAML or Excell. Doesn’t matter, just prepare the system with human-readable format and adaptive for the non-engineering team. Then, we have to parse that file, validate it and override <code>FeatureToggle</code> values. That solution will be more elegant than hardcoded values.</li>
+</ul>
+<pre><code class="language-kotlin">data class FoodFeatureToggle(
+    val foodType: FoodType = FoodType.BURGER,
+) {
+    enum class FoodType {
+        BURGER,
+        HOTDOG,
+        ;
+    }
+    companion object {
+        val DEFAULT = FoodFeatureToggle()
+    }
+}
+//....
+fun showFood() {
+    val featureToggle: FoodFeatureToggle = FoodFeatureToggle.DEFAULT
+    when(featureToggle.foodType) {
+        FoodFeatureToggle.FoodType.BURGER -&gt; showBurger()
+        FoodFeatureToggle.FoodType.HOTDOG -&gt; showHotdog()
+    }
+}
+</code></pre>
+<ul>
+<li><strong>file system</strong>
+Based on the previous work with configuration files, we have to add a new data source. Data source not for a compiled build, for runtime. Let’s put this file onto device storage and make it editable. Then we need to parse that file on application startup and set overridden values. There is doesn’t matter how the file will be passed onto a device(CLI, file manager, remote repository, or <a href="https://firebase.google.com/docs/remote-config">3rd party service</a>).</li>
+<li><strong>debug panel</strong>
+That type of switching will be convenient for internal testing. You wrote a guide for toggle configurations, and pass it QA.File system configuration it’s ok on the workplace, but difficulties in the setup, for example, in the subway.
+To solve that problem, write additional activity with custom edit-type block: string → EditText, boolean → checkbox/switcher, enum - popup/RadioButton e.t.c. Don’t forget that this screen should not reach the end user.
+The previously described methods fit perfectly into the structure when your flags are up to date at the time your application process starts. The target <code>FeatureToggle</code> configuration collects BEFORE IoC(DependencyIjection or ServiceLocator) framework initialization. Otherwise, we have to solve the problem with dynamic feature switching.</li>
+</ul>
+<p align="center">
+    <img src="resources/Untitled%204.svg"/>
+</p>
+
+<p>Pictured is a burger but got a hot dog menu</p>
+<p>The burger on the plate is based on the <code>FeatureToggle</code> config that was received on application start. After that, we receive remote updates and have a hot-date instead of a burger. What kind of receip will be shown when clicking on the “RECIPE” button?</p>
+<p>There is not possible to determine live FeatureToggle lifecycle, because it might be changed at any time. That is the major initialization and providing problem. That is another story about how to solve it, but the first question what you have to ask - “For what?”. I’ve seen that type of solution only once and didn’t find a good answer to that question. Just highlight, that we have 2 different ways to solve feature toggle providing and initialization.
+Lasagna</p>
+<h2 id="lasagna-recipe">Lasagna recipe</h2>
+<p align="center">
+    <img src="resources/Untitled.png"/>
+</p>
+
+<p>1 <strong>FeatureToggleContainer</strong> 
+The main registration point of any <code>FeatureToggle</code>. Anything that doesn't get into the Registrar will be ignored. Just declare the container and list all FeatureToggles. That is necessary to correct configuration IoC framework and setup protection. The container contains object instances, not class definitions. Uses for cheapest fallback. If there are no settings in further layers, the default setting will be accepted. Remember it so that unfinished functionality does not get into the work area. As a general rule, container declarations should be as if all features are disabled.</p>
+<pre><code class="language-kotlin">private val featureToggleContainer: FeatureToggleContainer = SimpleFeatureToggleContainer(
+        featureToggles = setOf(
+            SampleTitleFeatureToggle(
+                enabled = false,
+                title = &quot;Sample FeatureToggle&quot;,
+            ),
+            RestaurantInfoFeatureToggle(
+                mapVisible = false,
+                deliveryCostsVisible = false,
+                ratingVisible = false,
+            ),
+            MenuItemFeatureToggle(
+                enabled = false,
+                gridCount = 3,
+                type = MenuItemFeatureToggle.PreviewType.HORIZONTAL_LIST,
+                addToCartAvailable = true,
+            )
+        )
+    )
+FeatureToggleContainerHolder.init(featureToggleContainer)
+</code></pre>
+<p>2 <strong>Default config</strong>
+It’s a build configuration that might be passed via resources. We might do it by: <code>raw</code>, <code>xml</code>,<code>asset</code> or another way. Or create a custom compile time solution that will extract and override <code>FeatureToggle</code> values.
+Looking ahead, the remote config is based on <code>Firebase</code>. It has a default config setting from a resource file. Since the remote type may not be available for the dev build, we build the <code>ResourcesFeatureToggleReader</code> on the structure of the same file so as not to relearn:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;defaultsMap&gt;
+    &lt;entry&gt;
+        &lt;key&gt;sample_title&lt;/key&gt;
+        &lt;value&gt;{
+            &quot;enabled&quot;:true,
+            &quot;title&quot;:&quot;Sample Resources config Title&quot;
+            }
+        &lt;/value&gt;
+    &lt;/entry&gt;
+&lt;/defaultsMap&gt;
+</code></pre>
+<p>Overriding title key with a value <code>Sample Resources config Title</code> and open our build:</p>
+<p align="center">
+    <img src="resources/Untitled.jpeg"/>
+</p>
+<p>3 <strong>Remote config</strong>
+Remote type of flag delivery. Designed for emergency control on rollouted builds. The main idea is to control, when exchanging the flag with rollout a new version is very expensive and need to additional developers, QA and manager team, you have to use that type of control. Or, for A/B testing)
+Solve that type of config possible by the next ways: 3rd party solution or custom. The most popular 3rd party solution in mobile development - <a href="https://firebase.google.com/products/remote-config">Firebase Remote Config</a>. There is a lot of examples how to use it for A/B testing. I just want to emphasize that this is not a completely best example of his issuance. It is only remote control to rollout of user percentage(yes, with a cache under the hood) with fallback to default resources. The really honest system has to have the possibility to setup it up on all layers(container, config, remote e.t.c). But, it’s just details, and we have to start with this system too.</p>
+<pre><code class="language-kotlin">FirebaseFeatureToggleReader(
+    fetchTimeout = 60.seconds,
+    minimumFetchInterval = 12.hours,
+    json = json,
+    defaultConfigRes = defaultXmlConfigResource,
+)
+</code></pre>
+<p>Set the settings for <code>FirebaseFeatureToggleReader</code> - timeout and minimum interval for downloading a new file, deserializer and default config (see point 2). Then, started to play with Web interface:</p>
+<p align="center">
+    <img src="resources/firebase-remote-config.png"/>
+</p>
+<p>4 <strong>Debug file config</strong>
+The first three layers are necessary as an MVP set for target users. Then we have to prepare set for developers and QA team. Let’s prepare a backdoor to force it via a configuration file. And don’t forget to hide it by a <code>flavor</code> type, for Dev and QA(not for production).</p>
+<pre><code class="language-kotlin">XmlFileFeatureToggleReader(
+    json = json,
+    xmlConfigReader = XmlFileConfigReader(),
+    xmlConfigFileProvider = DefaultConfigFileProvider(
+        applicationContext = context,
+    ),
+)
+</code></pre>
+<p>It is necessary, cause not all features might be ready for production/ payable features/ broken or something else. All responsibility for application stability is declared in your <a href="https://en.wikipedia.org/wiki/Terms_of_service">terms of conditions</a>. Now, to force the <code>FeatureToggle</code> you have to edit your file on a device by adb, clie, put it manually or e.t.c.
+5 <strong>Debug panel</strong>
+The last is candy. An editable file is good, but to edit it faster we need to have a laptop. To solve that problem we prepared a debug panel activity. It’s an additional activity that is hidden under the hood as a launcher(if you want to see another way of representation, please let me now or create a separate issue on the github).</p>
+<p align="center">
+    <img src="resources/debug-panel-sample.jpeg"/>
+</p>
+<p>Add 2 buttons: drop config and save, to have the possibility to rollback to the native setup at any time. We make a remark that the whole system works with a static config. Therefore, to apply it, you will need to restart the main application.</p>
+<pre><code class="language-kotlin">devImplementation(&quot;io.github.ilyapavlovskii:debug.panel:X.X.X&quot;)
+</code></pre>
+<p>To apply that launcher, just add the dependency to your application module. Be sure that <code>FeatureToggleReaderHolder</code> and <code>FeatureToggleContainerHolder</code> are initialized. And the rest will be launched automatically.</p>
+<h2 id="bon-appetit">Bon appetit</h2>
+<p>At the output we get the priority list: first - debug panel and file, remote control as second, next deal for default config, and hardcode in the end. As I said before, we have to have a scalable system. We prepared the system based on <a href="https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern">chain of responsibility pattern</a>, and any additional config reader must be added. Feel free.</p>
+<pre><code class="language-kotlin">val featureToggleReader = ChainFeatureToggleReader(
+      featureReaders = arrayOf(
+                    // Debug file config reader
+          XmlFileFeatureToggleReader(
+              json = json,
+              xmlConfigReader = XmlFileConfigReader(),
+              xmlConfigFileProvider = DefaultConfigFileProvider(
+                  applicationContext = context,
+              ),
+          ),
+                    // Remote feature toggle reader
+          FirebaseFeatureToggleReader(
+              fetchTimeout = 60.toDuration(DurationUnit.SECONDS),
+              minimumFetchInterval = 12.toDuration(DurationUnit.HOURS),
+              json = json,
+              defaultConfigRes = defaultXmlConfigResource,
+          ),
+                    // Default config reader
+          ResourcesFeatureToggleReader(
+              json = json,
+              configReader = xmlConfigReader,
+          ),
+      )
+  )
+  FeatureToggleReaderHolder.init(featureToggleReader)
+</code></pre>
+<p>And all this with a connection diagram and an example is stored <a href="https://github.com/IlyaPavlovskii/FeatureToggle">here</a>. Bone appetit.</p>
+<h2 id="ps">P.S.</h2>
+<p>And a little practice story about FeatureToggle and A/B testing. Once upon a time on a project ouк managers decided to place a button scroll to top which will be shown on 1/4 of the web page. Cool and pretty feature for user. But, after analysis, we understood that the feature decreases our monthly ad income. The problem was that all the main ads started in the middle of the page and a user simply bypassed it or accidentally pressed the button. If you want to see more history about how to save money on the development process, please, give me feedback with сlaps and subscriptions.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../stop-refactoring/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Stop Refactoring. Kotlin. Android" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Stop Refactoring. Kotlin. Android
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../russian/stop-refactoring/" class="md-footer__link md-footer__link--next" aria-label="Next: Стоп рефакторинг. Kotlin. Android" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Стоп рефакторинг. Kotlin. Android
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
