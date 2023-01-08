@@ -14,7 +14,7 @@
 - I'm a `Android Engineer` with 10 years experience  
 - I have Bachelor computer science degree (<a href="https://www.bsuir.by/en/">BSUIR</a>)
 - I have worked in many companies(outsourcing, freelance, startup and big corporate)
-- Here is my [CV](/raw/main/IliaPavlovskii-CV.pdf)
+- Here is my [CV](/raw/main/CV_Ilia_Pavlovskii.pdf)
 
 ### Social networks
 [![github](resources/github.svg)](https://github.com/IlyaPavlovskii/)
