@@ -1,0 +1,941 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/compose-vector-shape/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Making a Custom Shape Widget on Jetpack Compose Using Figma and AndroidVectors - Ilia Pavlovskii</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#making-a-custom-shape-widget-on-jetpack-compose-using-figma-and-androidvectors" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Ilia Pavlovskii" class="md-header__button md-logo" aria-label="Ilia Pavlovskii" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ilia Pavlovskii
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Making a Custom Shape Widget on Jetpack Compose Using Figma and AndroidVectors
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Ilia Pavlovskii" class="md-nav__button md-logo" aria-label="Ilia Pavlovskii" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Ilia Pavlovskii
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          English
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="English" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          English
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stop-refactoring/" class="md-nav__link">
+        Stop Refactoring. Kotlin. Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature-toggle/" class="md-nav__link">
+        FeatureToggle cooking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Making a Custom Shape Widget on Jetpack Compose Using Figma and AndroidVectors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Making a Custom Shape Widget on Jetpack Compose Using Figma and AndroidVectors
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android-vector" class="md-nav__link">
+    Android vector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Russian
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Russian" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Russian
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../russian/stop-refactoring/" class="md-nav__link">
+        Стоп рефакторинг. Kotlin. Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../russian/feature-toggle/" class="md-nav__link">
+        Готовим FeatureToggle для Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../russian/compose-vector-shape/" class="md-nav__link">
+        Делаем виджет с кастомной формой на Jetpack Compose с помощью Figma и AndroidVectors
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          English
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="English" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          English
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/english/shooting-sport/" class="md-nav__link">
+        Shooting sport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Russian
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Russian" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Russian
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/russian/pbh/" class="md-nav__link">
+        Год в Польше по PBH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/russian/shooting-sport/" class="md-nav__link">
+        Стрелковый спорт или новое хобби
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.linkedin.com/in/ipavlovskii/" class="md-nav__link">
+        LinkedIn
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/IlyaPavlovskii/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://habr.com/ru/users/TranE91/posts/" class="md-nav__link">
+        Habr
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://pavlovskiiilia.medium.com/" class="md-nav__link">
+        Medium
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android-vector" class="md-nav__link">
+    Android vector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="making-a-custom-shape-widget-on-jetpack-compose-using-figma-and-androidvectors">Making a Custom Shape Widget on Jetpack Compose Using Figma and AndroidVectors</h1>
+<p>I recently shared my thoughts on my new hobby - <a href="http://localhost:63344/docker-sampl/other/english/shooting-sport/">shooting sport</a>. After some practice, I became interested in tracking and saving my results. I started looking for an application that close my problem and… found a few applications that can’t fully close all my requirements. And another problem - bad UX. All applications can track IPSC points by manually entering them manually by EditText or clicking on the plus/minus buttons. Why can’t it be an IPSC shield? I decided to close this problem and write my own application for <a href="https://play.google.com/store/apps/details?id=by.bulba.ipsc.calculator">calculating the hit factor in IPSC competitions.</a></p>
+<h2 id="problem">Problem</h2>
+<p>Create an IPSC shield widget with a clickable area by sectors alpha, charlie, and delta. Calculate total points by clicking on the widget (click on alpha gives 5 points, charlie - 3, and delta - 1).</p>
+<p><img alt="Untitled" src="resources/Untitled.png" /></p>
+<h2 id="solution">Solution</h2>
+<p>I decided to write this project on modern practices and choose <a href="https://developer.android.com/jetpack/compose?gclid=Cj0KCQjw2v-gBhC1ARIsAOQdKY1DTNgfsQS9vlnHLapHgj5DMfiaQ23qYEiiYL9NVcbv4RS-v130_iUaAlW2EALw_wcB&amp;gclsrc=aw.ds">jetpack compose</a> as a primary UI framework. Such a problem could be solved with the help of custom drawings on canvas. Ok, what does jetpack compose have?</p>
+<p>Framework has the same solution - <a href="https://developer.android.com/jetpack/compose/graphics/draw/overview">drawings on canvas</a>. Yes, it is possible, but if we research a little bit more, we might find a better solution. What if it is possible to create 3 different buttons with a custom shape and overlay it? And yes, <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Button(kotlin.Function0,androidx.compose.ui.Modifier,kotlin.Boolean,androidx.compose.foundation.interaction.MutableInteractionSource,androidx.compose.material.ButtonElevation,androidx.compose.ui.graphics.Shape,androidx.compose.foundation.BorderStroke,androidx.compose.material.ButtonColors,androidx.compose.foundation.layout.PaddingValues,kotlin.Function1)">compose has it</a>.</p>
+<p><img alt="Untitled" src="resources/Untitled%201.png" /></p>
+<p>All that we need - just put a custom shape as an argument to the button.</p>
+<p>Let’s look again and try to split all layers of the shield.</p>
+<p><img alt="Untitled" src="resources/Untitled%202.png" /></p>
+<p>The <code>Shape</code> has a lot of implementation variation. In my case, I have to use <code>GenericShape</code>:</p>
+<pre><code class="language-kotlin">class GenericShape(
+    private val builder: Path.(size: Size, layoutDirection: LayoutDirection) -&gt; Unit
+) : Shape {
+
+    override fun createOutline(
+        size: Size,
+        layoutDirection: LayoutDirection,
+        density: Density
+    ): Outline {
+        val path = Path().apply {
+            builder(size, layoutDirection)
+            close()
+        }
+        return Outline.Generic(path)
+    }
+}
+</code></pre>
+<p>Implementation requires to know target size - it’s not a problem, we have a design and can resize it. The next step - find a way how to implement <code>path</code>.</p>
+<p>We have to set coordinates on a layer and close it in a path… it’s a <a href="https://en.wikipedia.org/wiki/Vector_space">vector array</a> or <a href="https://en.wikipedia.org/wiki/Polygon">polygone</a>. Of course, I can create another “new unique solution” to store vectors and pass it to create my path. Instead of writing a hardcode solution, I decided to research again and reuse the vector image format - SVG or AndroidVector. Android already has such format in human-readable format. And this way will be more effective: download SVG from Figma → convert to AndroidVector → pass this vector to black-box that creates the target path. Now, I have to understand how to parse AndroidVector and create the path.</p>
+<h2 id="android-vector">Android vector</h2>
+<p>I think each android developer had an experience with vector usage. But not all know, what is the magic letters and numbers inside the <code>pathData</code>:</p>
+<pre><code class="language-kotlin">&lt;!-- Sector D vector --&gt;
+&lt;path
+      android:pathData=&quot;M260.28,4H131.18L4,163.74V323.49L131.18,484H260.28L384.4,323.49V163.74L260.28,4Z&quot;
+      android:strokeWidth=&quot;8&quot;
+      android:fillColor=&quot;#C5A781&quot;
+      android:strokeColor=&quot;#C5A781&quot;/&gt;
+</code></pre>
+<p>In fact, there is no great magic here. There are 2 main commands:</p>
+<ul>
+<li>moveTo - move cursor to a target point</li>
+<li>lineTo - move cursor and draw a line</li>
+</ul>
+<p>This is the main, other cases it’s only a variation of that commands. If you want to deep dive into that topic - I want to recommend <a href="https://medium.com/@ali.muzaffar/understanding-vectordrawable-pathdata-commands-in-android-d56a6054610e">this topic</a>. </p>
+<ul>
+<li>M - move to and X,Y as an argument</li>
+<li>L - line to and X,Y as an argument</li>
+<li>V - line to with a single argument X - movement on the vertical asix</li>
+<li>H - line to with a single argument Y - movement on the horizontal asix</li>
+<li>Z - terminator</li>
+</ul>
+<p>It’s needed to compress vector on the protocol layer. All that we need now - writing a parser)</p>
+<p>And don’t forget about screen scalability. We have an etalon widget size from Figma, but different screen sizes for users. Remember again vector mathematics, recalculate the screen scale factor, and put its value to the target screen parser:</p>
+<pre><code class="language-kotlin">internal fun Size.scaleToEtalon(etalonVectorSize: Size): ScaleFactor {
+    return if (this.width &lt; height) {
+        (this.width / etalonVectorSize.width)
+            .let { scale -&gt; ScaleFactor(scale, scale) }
+    } else {
+        (this.height / etalonVectorSize.height)
+            .let { scale -&gt; ScaleFactor(scale, scale) }
+    }
+}
+</code></pre>
+<p>Next, we pass the scale factor in our parser and get the result:</p>
+<pre><code class="language-kotlin">internal fun drawPathFromPathData(
+    path: Path =Path(),
+    scaleFactor: ScaleFactor,
+    pathData: String,
+    offsetSize: Size =Size(0f, 0f),
+): Path {
+    val list = pathData.split(PATH_DATA_PARSER_REGEX)
+    var lastKnownOffset =Offset(0f, 0f)
+    list.forEach{pathPart-&gt;
+val startChar = try {
+            pathPart.toCharArray()[0]
+        } catch (aioobe: ArrayIndexOutOfBoundsException) {
+            return@forEach
+        }
+        val drawPathPattern = DrawPathPattern.parseKey(startChar) ?: return@forEach
+        when (drawPathPattern) {
+            DrawPathPattern.MOVE_TO-&gt; {
+                val values = drawPathPattern.pattern.find(pathPart)?.groupValues ?: return@forEach
+                val x = values[3].toFloat()
+                val y = values[5].toFloat()
+                path.moveTo(scaleFactor = scaleFactor, x = x, y = y, offsetSize = offsetSize)
+                lastKnownOffset =Offset(x, y)
+            }
+
+            DrawPathPattern.LINE_TO-&gt; {
+                val values = drawPathPattern.pattern.find(pathPart)?.groupValues ?: return@forEach
+                val x = values[3].toFloat()
+                val y = values[5].toFloat()
+                path.lineTo(scaleFactor = scaleFactor, x = x, y = y, offsetSize = offsetSize)
+                lastKnownOffset =Offset(x, y)
+            }
+            DrawPathPattern.HORIZONTAL_LINE_TO-&gt; {
+                val values = drawPathPattern.pattern.find(pathPart)?.groupValues ?: return@forEach
+                val x = values[3].toFloat()
+                path.lineTo(scaleFactor = scaleFactor, x = x, y = lastKnownOffset.y, offsetSize = offsetSize)
+                lastKnownOffset = lastKnownOffset.copy(x = x)
+            }
+            DrawPathPattern.VERTICAL_LINE_TO-&gt; {
+                val values = drawPathPattern.pattern.find(pathPart)?.groupValues ?: return@forEach
+                val y = values[3].toFloat()
+                path.lineTo(scaleFactor = scaleFactor, x = lastKnownOffset.x, y = y, offsetSize = offsetSize)
+                lastKnownOffset = lastKnownOffset.copy(y = y)
+            }
+        }
+}
+return path
+}
+
+private enum class DrawPathPattern(
+    val key: Char,
+    val pattern: Regex,
+) {
+MOVE_TO(
+        key = 'M',
+        pattern = &quot;([A-Z](\\s)*)(\\d+(\\.\\d+)*),(\\d+(\\.\\d+)*)&quot;.toRegex(),
+    ),
+LINE_TO(
+        key = 'L',
+        pattern = &quot;([A-Z](\\s)*)(\\d+(\\.\\d+)*),(\\d+(\\.\\d+)*)&quot;.toRegex(),
+    ),
+HORIZONTAL_LINE_TO(
+        key = 'H',
+        pattern = &quot;([A-Z](\\s)*)(\\d+(\\.\\d+)*)&quot;.toRegex(),
+    ),
+VERTICAL_LINE_TO(
+        key = 'V',
+        pattern = &quot;([A-Z](\\s)*)(\\d+(\\.\\d+)*)&quot;.toRegex(),
+    ),
+    ;
+
+    companion object {
+        fun parseKey(key: Char): DrawPathPattern? = values().firstOrNull{ it.key == key}
+}
+}
+</code></pre>
+<p>Full <a href="https://gist.github.com/IlyaPavlovskii/4bee00442263622e6250a60ae03491a3">gist here</a>. </p>
+<p><img alt="Shield example" src="resources/shield-example.gif" /></p>
+<h2 id="conclusions">Conclusions</h2>
+<p>With the help of compose, already now, you can safely draw a non-standard design for production, thereby saving time. I think, after my research, the article will be very useful for implementing specific widgets that go beyond the standard materiał design. All you have to do is get the design, download the vector, pass it to the parser and get a unique button.</p>
+<p>P.S. I did not wrap these developments in a library, well, I'm sure that there is a need for this. If, nevertheless, the conversion from vector XML to custom shape seems necessary, write in the comments, I will definitely make a solution in <a href="https://github.com/IlyaPavlovskii">my repository</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../feature-toggle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FeatureToggle cooking" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              FeatureToggle cooking
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../russian/stop-refactoring/" class="md-footer__link md-footer__link--next" aria-label="Next: Стоп рефакторинг. Kotlin. Android" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Стоп рефакторинг. Kotlin. Android
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
