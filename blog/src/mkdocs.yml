@@ -10,8 +10,11 @@ nav:
                 - 'Стоп рефакторинг. Kotlin. Android': 'android/russian/stop-refactoring/index.md'
                 - 'Готовим FeatureToggle для Android': 'android/russian/feature-toggle/index.md'
     - Other:
-          - 'Год в Польше по PBH': 'other/pbh/index.md'
-          - 'Стрелковый спорт или новое хобби': 'other/shooting-sport/index.md'
+        - 'English':
+            - 'Shooting sport':  'other/english/shooting-sport/index.md'
+        - 'Russian':
+          - 'Год в Польше по PBH': 'other/russian/pbh/index.md'
+          - 'Стрелковый спорт или новое хобби': 'other/russian/shooting-sport/index.md'
     - LinkedIn: "https://www.linkedin.com/in/ipavlovskii/"
     - GitHub: "https://github.com/IlyaPavlovskii/"
     - Habr: "https://habr.com/ru/users/TranE91/posts/"

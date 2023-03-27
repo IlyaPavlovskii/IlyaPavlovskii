@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/</loc>
-         <lastmod>2023-01-08</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/feature-toggle/</loc>
-         <lastmod>2023-01-08</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/stop-refactoring/</loc>
-         <lastmod>2023-01-08</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/feature-toggle/</loc>
-         <lastmod>2023-01-08</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/stop-refactoring/</loc>
-         <lastmod>2023-01-08</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/pbh/</loc>
-         <lastmod>2023-01-08</lastmod>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/english/shooting-sport/</loc>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/shooting-sport/</loc>
-         <lastmod>2023-01-08</lastmod>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/russian/pbh/</loc>
+         <lastmod>2023-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/russian/shooting-sport/</loc>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
