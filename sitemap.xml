@@ -2,52 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/compose-vector-shape/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/feature-toggle/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/forceupdate-feature/</loc>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/english/stop-refactoring/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/compose-vector-shape/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/feature-toggle/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/forceupdate-feature/</loc>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/android/russian/stop-refactoring/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/english/shooting-sport/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/russian/pbh/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ilyapavlovskii.github.io/IlyaPavlovskii/other/russian/shooting-sport/</loc>
-         <lastmod>2023-03-27</lastmod>
+         <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

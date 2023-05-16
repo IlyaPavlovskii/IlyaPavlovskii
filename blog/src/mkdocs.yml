@@ -4,13 +4,15 @@ nav:
     - Introduction: 'index.md'
     - Android:
           - 'English':
+                - 'Making a Custom Shape Widget on Jetpack Compose Using Figma and AndroidVectors': 'android/english/compose-vector-shape/index.md'
                 - 'Stop Refactoring. Kotlin. Android': 'android/english/stop-refactoring/index.md'
                 - 'FeatureToggle cooking': 'android/english/feature-toggle/index.md'
-                - 'Making a Custom Shape Widget on Jetpack Compose Using Figma and AndroidVectors': 'android/english/compose-vector-shape/index.md'
+                - 'ForceUpdate feature': 'android/english/forceupdate-feature/index.md'
           - 'Russian':
                 - 'Стоп рефакторинг. Kotlin. Android': 'android/russian/stop-refactoring/index.md'
                 - 'Готовим FeatureToggle для Android': 'android/russian/feature-toggle/index.md'
                 - 'Делаем виджет с кастомной формой на Jetpack Compose с помощью Figma и AndroidVectors': 'android/russian/compose-vector-shape/index.md'
+                - 'ForceUpdate feature': 'android/russian/forceupdate-feature/index.md'
     - Other:
         - 'English':
             - 'Shooting sport':  'other/english/shooting-sport/index.md'
