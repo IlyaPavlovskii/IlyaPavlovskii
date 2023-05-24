@@ -1,3 +1,5 @@
+## Deprecated page, new version is here - https://ilyapavlovskii.github.io/
+
 <h1 align="center">Hi there, I'm Ilia Pavlovskii</h1>
 <div align="center">
     <img src="raw/main/images/android.png" style="vertical-align: middle;" width="32"/>
