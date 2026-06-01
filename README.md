@@ -54,14 +54,6 @@ Outside of work my interests span **business, finance, psychology**, and keeping
 
 ---
 
-## GitHub stats
-
-<a href="https://github.com/IlyaPavlovskii">
-  <img height="160px" src="https://github-readme-stats.vercel.app/api?username=IlyaPavlovskii&hide_title=true&show_icons=true&include_all_commits=true&line_height=21&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite" alt="GitHub stats" />
-</a>
-
----
-
 ## Support my work
 
 If you find my articles or open-source projects useful, you can buy me a coffee — it keeps me writing. 🙏
